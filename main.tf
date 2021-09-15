@@ -6,7 +6,7 @@ resource "aws_ebs_volume" "volume" {
 }
 
 resource "aws_instance" "web" {
-  ami               = var.ami_id #"ami-0a2232786115639d7"
+  ami               = "ami-0a2232786115639d7"
   instance_type     = var.instance_type #"t2.micro"
   availability_zone = var.availability_zone
   subnet_id         = var.subnet_id #element(module.vpc.private_subnets, 0)
