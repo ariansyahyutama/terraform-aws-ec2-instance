@@ -25,6 +25,10 @@ variable "instance_type" {
 variable "subnet_id" {
   type = string
 }
+
+variable "ami_id" {
+  type = string
+}
 /*
 
 variable "create" {
