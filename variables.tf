@@ -24,6 +24,7 @@ variable "instance_type" {
 
 variable "subnet_id" {
   type = string
+  default = null
 }
 /*
 variable "ami_id" {
