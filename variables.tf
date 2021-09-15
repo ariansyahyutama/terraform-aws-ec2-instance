@@ -23,8 +23,8 @@ variable "instance_type" {
 }
 
 variable "subnet_id" {
-  type = list(string)
-  default = null
+  #type = list(string)
+  #default = null
 }
 /*
 variable "ami_id" {
