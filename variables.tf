@@ -4,11 +4,13 @@ variable "tags" {
 
 
 variable "product_domain" {
-  default = string
+  type = string
+  default = ""
 }
 
 variable "environment" {
-  default = string
+  type = string
+  default = ""
 }
 
 
