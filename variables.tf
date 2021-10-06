@@ -199,12 +199,12 @@ variable "subnet_id" {
   type        = string
   default     = null
 }
-
+/*
 variable "tags" {
   description = "A mapping of tags to assign to the resource"
   type        = map(string)
   default     = {}
-}
+}*/
 
 variable "tenancy" {
   description = "The tenancy of the instance (if the instance is running in a VPC). Available values: default, dedicated, host."
