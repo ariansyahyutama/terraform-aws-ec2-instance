@@ -12,30 +12,30 @@ locals {
       }
   )
 }
-
+/*
 
 resource "aws_ebs_volume" "this" {
   availability_zone = var.availability_zone #"ap-southeast-1a"
   size              = var.size #8
   type              = var.type #"gp3"   
   #tags              = var.tags
-}
+}*/
 
 resource "aws_instance" "this" {
   ami               = "ami-0a2232786115639d7"
   instance_type     = var.instance_type #"t2.micro"
   availability_zone = var.availability_zone
   subnet_id         = var.subnet_id #element(module.vpc.private_subnets, 0)
-  tags              = var.tags-ec2
+  #tags              = var.tags-ec2
 }
-
+/*
 resource "aws_volume_attachment" "this" {
   device_name   = var.device_name   #"/dev/sdh"
   volume_id     = var.volume_id     #aws_ebs_volume.this.id
   instance_id   = var.instance_id   #aws_instance.this.id
 }
 
-
+*/
 
 
 /*
