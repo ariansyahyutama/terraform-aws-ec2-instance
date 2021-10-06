@@ -1,4 +1,4 @@
-locals {
+/*locals {
   common_tags = merge(
       var.additional_tags,
       {
@@ -12,6 +12,7 @@ locals {
       }
   )
 }
+
 /*
 
 resource "aws_ebs_volume" "this" {
