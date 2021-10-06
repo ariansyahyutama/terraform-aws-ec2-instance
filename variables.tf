@@ -1,5 +1,7 @@
-variable "tags" {
+variable "tags-ec2" {
   type = map(string)
+  default = {
+  }
 }
 
 

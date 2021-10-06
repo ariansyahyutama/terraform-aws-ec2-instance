@@ -26,7 +26,7 @@ resource "aws_instance" "this" {
   instance_type     = var.instance_type #"t2.micro"
   availability_zone = var.availability_zone
   subnet_id         = var.subnet_id #element(module.vpc.private_subnets, 0)
-  #tags              = var.tags
+  tags              = var.tags-ec2
 }
 
 resource "aws_volume_attachment" "this" {
