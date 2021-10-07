@@ -58,6 +58,10 @@ resource "aws_instance" "this" {
       throughput            = lookup(ebs_block_device.value, "throughput", null)
     }
   }
+
+  lifecycle {
+    ignore_changes = [associate_public_ip_address]
+  }
 }
 /*
 resource "aws_volume_attachment" "this" {
