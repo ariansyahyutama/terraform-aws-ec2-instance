@@ -59,10 +59,10 @@ resource "aws_instance" "this" {
     }
   }
 
-  lifecycle {
-    prevent_destroy = true
+  #lifecycle {
+   # prevent_destroy = true
     #ignore_changes = [associate_public_ip_address]
-  }
+  #}
 }
 /*
 resource "aws_volume_attachment" "this" {
