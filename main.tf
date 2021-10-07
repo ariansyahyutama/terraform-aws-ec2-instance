@@ -27,6 +27,8 @@ resource "aws_instance" "this" {
   instance_type     = var.instance_type #"t2.micro"
   availability_zone = var.availability_zone
   subnet_id         = var.subnet_id #element(module.vpc.private_subnets, 0)
+
+  associate_public_ip_address = var.associate_public_ip_address
   
   dynamic "root_block_device" {
     for_each = var.root_block_device
