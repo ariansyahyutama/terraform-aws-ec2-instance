@@ -1,9 +1,9 @@
-variable "tags-ec2" {
+/*variable "tags-ec2" {
   type = map(string)
   default = {
   }
 }
-
+*/
 
 variable "product_domain" {
   type = string
@@ -270,4 +270,11 @@ variable "cpu_threads_per_core" {
   description = "Sets the number of CPU threads per core for an instance (has no effect unless cpu_core_count is also set)."
   type        = number
   default     = null
+}
+
+
+variable "tags" {
+  description = "Set of tags to be added to the VPN Connection resource (only if `create_vpn_connection = true`)."
+  type        = map(string)
+  default     = {}
 }

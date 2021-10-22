@@ -23,10 +23,13 @@ resource "aws_ebs_volume" "this" {
 }*/
 
 resource "aws_instance" "this" {
-  ami               = "ami-0a2232786115639d7"
-  instance_type     = var.instance_type #"t2.micro"
-  availability_zone = var.availability_zone
-  subnet_id         = var.subnet_id #element(module.vpc.private_subnets, 0)
+  ami                     = var.ami #"ami-0a2232786115639d7"
+  instance_type           = var.instance_type #"t2.micro"
+  availability_zone       = var.availability_zone
+  subnet_id               = var.subnet_id #element(module.vpc.private_subnets, 0)
+  vpc_security_group_ids  = var.vpc_security_group_ids
+  key_name                = var.key_name
+  iam_instance_profile    = var.iam_instance_profile
 
   associate_public_ip_address = var.associate_public_ip_address
   
@@ -63,6 +66,8 @@ resource "aws_instance" "this" {
    # prevent_destroy = true
     #ignore_changes = [associate_public_ip_address]
   #}
+
+  tags = var.tags
 }
 /*
 resource "aws_volume_attachment" "this" {
