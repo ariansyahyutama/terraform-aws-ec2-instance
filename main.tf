@@ -63,9 +63,10 @@ resource "aws_instance" "this" {
   }
 
   #lifecycle {
-   # prevent_destroy = true
-    #ignore_changes = [associate_public_ip_address]
+    #prevent_destroy = true
+   #ignore_changes = ["ami"]
   #}
+
 
   tags = var.tags
 }
