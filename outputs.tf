@@ -1,4 +1,4 @@
-/*
+
 output "id" {
   description = "The ID of the instance"
   value       = element(concat(aws_instance.this.*.id, aws_spot_instance_request.this.*.id, [""]), 0)
@@ -9,6 +9,7 @@ output "arn" {
   value       = element(concat(aws_instance.this.*.arn, aws_spot_instance_request.this.*.arn, [""]), 0)
 }
 
+/*
 output "capacity_reservation_specification" {
   description = "Capacity reservation specification of the instance"
   value       = element(concat(aws_instance.this.*.capacity_reservation_specification, aws_spot_instance_request.this.*.capacity_reservation_specification, [""]), 0)
