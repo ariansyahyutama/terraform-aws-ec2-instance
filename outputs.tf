@@ -1,12 +1,12 @@
 
 output "id" {
   description = "The ID of the instance"
-  value       = element(concat(aws_instance.this.*.id, aws_spot_instance_request.this.*.id, [""]), 0)
+  value       = aws_instance.this.*.id
 }
 
 output "arn" {
   description = "The ARN of the instance"
-  value       = element(concat(aws_instance.this.*.arn, aws_spot_instance_request.this.*.arn, [""]), 0)
+  value       = aws_instance.this.*.arn
 }
 
 /*
