@@ -1,9 +1,3 @@
-variable "tags-ebs" {
-  type = map(string)
-  default = {
-  }
-}
-
 variable "product_domain" {
   type = string
   default = ""
