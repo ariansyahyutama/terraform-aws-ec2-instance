@@ -1,9 +1,8 @@
-/*variable "tags-ec2" {
+variable "tags-ebs" {
   type = map(string)
   default = {
   }
 }
-*/
 
 variable "product_domain" {
   type = string
