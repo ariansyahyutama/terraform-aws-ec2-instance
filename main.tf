@@ -71,12 +71,13 @@ resource "aws_instance" "this" {
   tags = var.tags
 }
 
+/*
 resource "aws_volume_attachment" "this" {
   device_name   = var.device_name   #"/dev/sdh"
   volume_id     = var.volume_id     #aws_ebs_volume.this.id
   instance_id   = var.instance_id   #aws_instance.this.id
 }
-
+*/
 
 
 /*
